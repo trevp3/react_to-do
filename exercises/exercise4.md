@@ -11,7 +11,7 @@ const pg = require('pg-promise')({
     // Initialization Options
 });
 const config = {
-    host:       process.env._db_HOST,
+    host:       process.env.DB_HOST,
     port:       process.env.DB_PORT,
     database:   process.env.DB_NAME,
     user:       process.env.DB_USER,
