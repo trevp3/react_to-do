@@ -32,10 +32,11 @@ DB_PORT=5432
 NODE_ENV=development
 ```
  6. At the top of your `server.js` (under `use strict`), add the following:
- ```
-const env         = process.env.NODE_ENV || 'development';
-const DEV         = env==='development';
-const dotenv      = (DEV) ? require('dotenv').config() : undefined;
+ 
+```
+  const env         = process.env.NODE_ENV || 'development';
+  const DEV         = env==='development';
+  const dotenv      = (DEV) ? require('dotenv').config() : undefined;
 ```
 
 
