@@ -32,7 +32,7 @@ module.exports = {
   /* creates a new task, returns the newly created record */
   addTask(req, res, next) {
     console.log('===addTask===',req.body)
-    _db.any(
+    _db.one(
       `INSERT INTO
       tasks (task_name, task_desc)
       VALUES ( $/name/, $/desc/ )

@@ -17,7 +17,7 @@ export default function TaskList(props) {
                 props.action(key)
               }
             }>
-            <strong>{props.list[key].task_name}</strong>{props.list[key].task_desc}
+            <strong>{props.list[key].task_name}</strong> {props.list[key].task_desc}
           </button>
         ))
       }
