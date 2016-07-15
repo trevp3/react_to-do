@@ -1,0 +1,11 @@
+body { padding-top: 70px; }
+.gaLogo{
+  background-image: url('/images/GA_Stack_Small_RedBlack_RGB.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 28px;
+  width: 110px;
+  display: inline-block;
+}
+
