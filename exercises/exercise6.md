@@ -59,7 +59,7 @@ export default class App extends React.Component{
     // note that classes do **not** have commas between their methods
 
     // 90% of your components will render()
-    // REMEMBER you can only return ONE root element from a render fn.
+    // REMEMBER you can only return **one** root element from a render fn.
     render(){
         return(
             <container>
@@ -79,6 +79,51 @@ export default class App extends React.Component{
 // mount our App at #container
 ReactDOM.render(<App/>, document.querySelector('#container'))
 ```
+
+**NOTE** Certain HTML attributes interfere with React. As such, we cannot use `class=` or `for=`, instead use `className=` and `htmlFor=` respectively.
+
+### Step 3 The easy parts
+Let's convert some of the easiest parts of the site into React.
+
+The most trivial part of the website is the navigation bar. The nav bar doesn't and shouldn't have a concept of _state_; it doesn't need to react to changes in state. 
+
+Let's create a Nav component as a _stateless function_: `/src/client/app/Nav.jsx`.
+
+```
+import React from 'react';
+
+const Nav = props=>(
+  <nav className="navbar navbar-default navbar-fixed-top">
+    <div className="container">
+      <div className="navbar-header">
+        <a href="../" className="navbar-brand">To Do App in React</a>
+      </div>
+    </div>
+  </nav>
+)
+export default Nav;
+``` 
+
+Make sure to import this new component in `App.jsx`!
+
+#ALERT! 
+
+The client just called and wants a footer! create a footer like we did for nav using the newly provided HTML from the design department:
+
+```
+<footer className="page-footer orange">
+  <div className="footer-copyright">
+    <div className="container">
+      <p>Made with <span class="glyphicon glyphicon-heart"></span> by students of General Assembly</p>
+    </div>
+  </div>
+</footer> 
+```
+
+##UPDATE! 
+They've included a logo to add to the end of the footer, but it's HUGE. 
+
+1. Use HTML and css to make it fit on the line.
 
 
 
