@@ -58,19 +58,7 @@ import ReactDOM         from 'react-dom'
 // create a React Component called _App_
 export default class App extends React.Component{
 
-    // every class gets a constructor.
-    // this is where we init the state.
-    constructor() {
-
-        // we also need to wake up our ancestors
-        super();
-
-        // here's our state
-        this.state = {
-          tasks : {}
-        }
-    }
-    // note that classes do **not** have commas between their methods
+    // note that es6 classes do **not** have commas between their methods
 
     // 90% of your components will render()
     // REMEMBER you can only return **one** root element from a render fn.
@@ -101,19 +89,15 @@ Let's convert some of the easiest parts of the site into React.
 
 The most trivial part of the website is the navigation bar. The nav bar doesn't and shouldn't have a concept of _state_; it doesn't need to react to changes in state. 
 
-Let's create a Nav component as a _stateless function_: `/src/client/app/Nav.jsx`.
+Let's create the Nav component as a _stateless function_: `/src/client/app/Nav.jsx`.
 
 ```
 import React from 'react';
 
 export default function Nav(props){
   return 
-  <nav className="navbar navbar-default navbar-fixed-top">
-    <div className="container">
-      <div className="navbar-header">
-        <a href="../" className="navbar-brand">To Do App in React</a>
-      </div>
-    </div>
+  <nav>
+    {/* slice out the nav from the layout template.*/}
   </nav>
 }
 ``` 
@@ -122,4 +106,5 @@ Make sure to import this new component in `App.jsx`!
 
 ###Step5 The Rest
 
-Repeat the pattern above to build out the footer, the TaskList and 
+Repeat the steps above to build out the `Footer`, the `TaskForm` and `TaskList`.
+**Protip** Only the `App` should be a class with state, all the other components should be stateless functional components that accept `props`.  
