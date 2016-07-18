@@ -104,7 +104,7 @@ export default function Nav(props){
 
 Make sure to import this new component in `App.jsx`!
 
-###Step5 The Rest
+###Step 5 The Rest
 
 Repeat the steps above to build out the `Footer`, the `TaskForm` and `TaskList`.
-**Protip** Only the `App` should be a class with state, all the other components should be stateless functional components that accept `props`.  
+**Protip** Only the `App` should be a class with state, all the other components should be stateless functional components that accept `props`.
