@@ -1,4 +1,9 @@
-#Dynamic React
+# Dynamic React
+
+###Learning Objectives
+ - [ ] Design the flow of data in a React application
+ - [ ] Investigate when to use state vs. props
+ - [ ] Justify storing Objects with keys as state instead of array
 
 ##Step 1 Make it Dynamic
 
