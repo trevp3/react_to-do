@@ -6,7 +6,7 @@ export default function(props) {
     event.preventDefault();
     const newTask = {
       name: event.target.elements.task_name.value,
-      desc: event.target.elements.task_desc.value
+      desc: event.target.elementeezs.task_desc.value
     }
 
     //fire the App's props function
@@ -16,7 +16,7 @@ export default function(props) {
     event.target.reset()
   }
   return (
-  <section className="jumbotron">
+  <section className="jum botron">
       <h1>Task Manager</h1>
       <form className="form-inline" onSubmit={handleSubmit}>
         <div className="form-group">

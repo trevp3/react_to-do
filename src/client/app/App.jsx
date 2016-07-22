@@ -1,4 +1,4 @@
-'use strict'
+ .'use strict'
 
 // import the libs we need
 import React            from 'react';
